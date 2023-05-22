@@ -79,8 +79,6 @@ public class Main {
 				ps.setInt(1, searchCountryId);
 				
 				try (ResultSet rs = ps.executeQuery()) {
-					int min = Integer.MAX_VALUE;
-					int max = Integer.MIN_VALUE;
 					
 					Set<String> mySetCountry = new HashSet<>();
 					Set<String> mySetLanguages = new HashSet<>();
@@ -108,7 +106,7 @@ public class Main {
 					for(String s : mySetLanguages) {
 						System.out.print(s + ", ");
 					}
-					System.out.println("Most recent stats");
+					System.out.println("\nMost recent stats");
 					System.out.println("Year: " + myListYear.get(0));
 					System.out.println("Population: " + myListPopulation.get(0));
 					System.out.println("GDP: " + myListGpd.get(0));
